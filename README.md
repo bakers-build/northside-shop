@@ -16,9 +16,9 @@ The shop's data is `src/shop.json`. It has no opening hours: adding them is the 
 
 ## Set up for a recording
 
-1. Create a GitLab project and push this repository to `main`. Tag the start:
+1. Create a GitHub repository and push this repository to `main`. Tag the start:
    `git tag demo-start && git push origin demo-start`.
-2. In the GitLab project, create the labels `doing` and `review`.
+2. In the GitHub repository, create the labels `doing` and `review`.
 3. Connect the repository as a bakers.build project. Keep this `WORKFLOW.md`.
 4. Create the issue **Show opening hours on the contact page**: "Customers call to ask when we
    are open. Show the opening hours on the contact page."
