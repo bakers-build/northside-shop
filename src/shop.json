@@ -1,0 +1,10 @@
+{
+  "name": "Northside Bakery",
+  "claim": "Fresh bread, every morning.",
+  "address": {
+    "street": "12 Mill Lane",
+    "city": "Northside"
+  },
+  "phone": "+49 30 5550 0142",
+  "email": "hello@northside-bakery.example"
+}
