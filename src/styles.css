@@ -47,3 +47,13 @@ address {
 a {
   color: #9a4b12;
 }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 1.5rem;
+}
+
+dd {
+  margin: 0;
+}
