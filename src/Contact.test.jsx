@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { renderToString } from 'react-dom/server'
 import { expect, test } from 'vitest'
 import App from './App.jsx'
@@ -59,4 +60,12 @@ test('the shop data holds the requested opening hours', () => {
     { day: 'Saturday', hours: '07:00–13:00' },
     { day: 'Sunday', hours: null },
   ])
+})
+
+test('the opening hours show each day and its hours on one line', () => {
+  const css = readFileSync(new URL('./styles.css', import.meta.url), 'utf8')
+  const rule = (selector) => css.match(new RegExp(`(^|\\n)${selector}\\s*\\{([^}]*)\\}`))?.[2] ?? ''
+  expect(rule('dl')).toMatch(/display:\s*grid/)
+  expect(rule('dl')).toMatch(/grid-template-columns:\s*max-content\s+1fr/)
+  expect(rule('dd')).toMatch(/margin:\s*0/)
 })
