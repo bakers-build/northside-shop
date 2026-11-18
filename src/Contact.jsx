@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 export default function Contact({ shop }) {
   return (
     <section>
@@ -12,6 +14,15 @@ export default function Contact({ shop }) {
         <br />
         <a href={`mailto:${shop.email}`}>{shop.email}</a>
       </p>
+      <h2>Opening hours</h2>
+      <dl>
+        {shop.openingHours.map(({ day, hours }) => (
+          <Fragment key={day}>
+            <dt>{day}</dt>
+            <dd>{hours ?? 'Closed'}</dd>
+          </Fragment>
+        ))}
+      </dl>
     </section>
   )
 }
